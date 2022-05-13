@@ -12,18 +12,18 @@ Minus is different than other portfolio templates in that it requires zero-to-li
 Minus, as mentioned, allows you to simply edit one config file, and BOOM, your data is all there! This config file is at ``config/config.js``, and is commented to ensure that each field is easy-to-understand.
 
 While I'm talking about the files, it's probably important to mention where (and what) each directory is for. Here's a brief overview of what each file does:
-``ROOT: index.html (for GH Pages)``
-``assets/images``:
-    - ``profile image (recommended)``
-``assets/js``:
-    - ``addControls.js: Adds the left/right page controls. Handles pages based on nav links``
-``assets/vendor``
-    - ``tailwind.min.js: Tailwind CSS CDN file``
-    - ``tailwind.min.css: Tailwind CSS classes``
-    - ``flowbite.min.css: Custom classes for Tailwind``
-    - ``flowbite.min.js: Custom interactions for Tailwind``
-``config/``:
-    - ``config.js: JSON for easy-data addition to template``
+``ROOT: index.html (for GH Pages)``<br>
+``assets/images``:<br>
+    - ``profile image (recommended)``<br>
+``assets/js``:<br>
+    - ``addControls.js: Adds the left/right page controls. Handles pages based on nav links``<br>
+``assets/vendor``<br>
+    - ``tailwind.min.js: Tailwind CSS CDN file``<br>
+    - ``tailwind.min.css: Tailwind CSS classes``<br>
+    - ``flowbite.min.css: Custom classes for Tailwind``<br>
+    - ``flowbite.min.js: Custom interactions for Tailwind``<br>
+``config/``:<br>
+    - ``config.js: JSON for easy-data addition to template``<br>
     - ``parser.js: Uses config.js data and appends to template``
     
 <br>
