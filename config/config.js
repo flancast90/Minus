@@ -73,8 +73,8 @@ var settings = {
             link: "https://github.com/flancast90"
         },
         discord: {
-            handle: "@flancast90",
-            link: "https://discord.com/channels/@me"
+            handle: "@flancast90#0088",
+            link: "https://discord.com/users/821777475587276802"
         },
         gmail: {
             handle: "flancast90@gmail.com",
