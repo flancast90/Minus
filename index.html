@@ -1,0 +1,148 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="assets/vendor/flowbite.min.js"></script>
+    <link rel="stylesheet" href="assets/vendor/flowbite.min.css"/>
+    <script src="assets/vendor/tailwind.min.js"></script>
+    <link rel="stylesheet" href="assets/vendor/timeline.min.css"/>
+    <script src="assets/vendor/timeline.min.js"></script>
+
+    <script src="assets/js/addControls.js" defer></script>
+    <script src="config/config.js"></script>
+    <script src="config/parser.js" defer></script>
+
+    <style>
+        :root {
+            --main-bg-color: #18191A;
+            --secondary-bg-color: #242526;
+            --bg-hover-color: #3A3B3C;
+            --text-primary: #E4E6EB;
+            --text-secondary: #B0B3B8;
+            --blue-accent-emphasis: #1f6feb;
+            --blue-accent-muted: rgba(56,139,253,0.4);
+            --blue-accent-subtle: rgba(56,139,253,0.15);
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'main-bg-color': 'var(--main-bg-color)',
+                        'secondary-bg-color': 'var(--secondary-bg-color)',
+                        'bg-hover-color': 'var(--bg-hover-color)',
+                        'text-primary': 'var(--text-primary)',
+                        'text-secondary': 'var(--text-secondary)',
+                        'blue-accent-emphasis': 'var(--blue-accent-emphasis)',
+                        'blue-accent-muted': 'var(--blue-accent-muted)',
+                        'blue-accent-subtle': 'var(--blue-accent-subtle)'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-main-bg-color">
+    <nav class="border-text-secondary px-2 sm:px-4 text-lg py-2.5 bg-secondary-bg-color shadow-lg">
+        <div class="container flex flex-wrap justify-between items-center mx-auto">
+            <a href="index.html" class="flex items-center">
+                <img src="" class="profile shadow-md opacity-75 rounded-lg mr-2 h-16" alt="Finn Lancaster" />
+            </a>
+
+            <div class="flex md:order-2">
+                <button data-collapse-toggle="mobile-menu" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-text-secondary rounded-lg md:hidden focus:outline-none" aria-controls="mobile-menu" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+                    <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </button>
+            </div>
+            <div class="hidden w-full md:block md:w-auto" id="mobile-menu">
+                <ul id="navLinks" class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-md md:font-medium">
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="control-left" class="fixed top-1/2 left-5 cursor-pointer z-50">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-16 text-blue-accent-subtle" x="0" y="0" viewBox="0 0 300.003 300.003" fill="currentColor">
+            <g>
+                <g>
+                    <path d="M150,0C67.159,0,0.001,67.159,0.001,150c0,82.838,67.157,150.003,149.997,150.003S300.002,232.838,300.002,150    C300.002,67.159,232.839,0,150,0z M189.226,218.202c-2.736,2.734-6.321,4.101-9.902,4.101c-3.582,0-7.169-1.367-9.902-4.103    l-56.295-56.292c-0.838-0.537-1.639-1.154-2.368-1.886c-2.796-2.799-4.145-6.479-4.077-10.144    c-0.065-3.667,1.281-7.35,4.077-10.146c0.734-0.731,1.53-1.349,2.368-1.886l56.043-56.043c5.47-5.465,14.34-5.467,19.808,0.003    c5.47,5.467,5.47,14.335,0,19.808l-48.265,48.265l48.514,48.516C194.695,203.864,194.695,212.732,189.226,218.202z"/>
+                </g>
+            </g>
+        </svg>
+    </div>
+    
+    <div id="control-right" class="fixed top-1/2 right-5 cursor-pointer z-50">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-16 text-blue-accent-subtle" x="0px" y="0px" viewBox="0 0 300 300" fill="currentColor">
+            <g>
+                <g>
+                    <path d="M150,0C67.157,0,0,67.157,0,150c0,82.841,67.157,150,150,150s150-67.159,150-150C300,67.157,232.843,0,150,0z     M195.708,160.159c-0.731,0.731-1.533,1.349-2.368,1.886l-56.295,56.295c-2.734,2.736-6.318,4.103-9.902,4.103    s-7.166-1.367-9.902-4.103c-5.47-5.47-5.47-14.34,0-19.808l48.509-48.516l-48.265-48.265c-5.47-5.473-5.47-14.34,0-19.808    c5.47-5.47,14.338-5.467,19.808-0.003l56.046,56.043c0.835,0.537,1.637,1.154,2.365,1.886c2.796,2.796,4.145,6.479,4.082,10.146    C199.852,153.68,198.506,157.361,195.708,160.159z"/>
+                </g>
+            </g>
+        </svg>
+    </div>
+
+    <main>
+        <div id="home" class="slide hidden relative text-center w-full" data-next="true">
+            <div class="flex flex-col space-y-4 items-center justify-center mx-10">
+                <img src="" class="profile relative mt-10 rounded-xl w-1/2 md:w-1/4 shadow-2xl bg-secondary-bg-color opacity-75"/>
+                <h1 id="greeting" class="text-5xl text-text-primary font-semibold">👋 I'm&nbsp;</h1>
+
+                <h3 id="description" class="text-2xl md:mx-20 text-text-secondary font-semibold"></h3>
+                
+                <div class="break"></div>
+
+                <div class="flex grow flex-row space-x-16">
+                    <a id="contactBtnMain" href="mailto:" class="flex flex-row items-center justify-center bg-[rgba(56,139,253,0.75)] px-5 py-2 shadow-lg text-text-primary text-lg font-semibold rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" x="0px" y="0px" viewBox="0 0 486.736 486.736" fill="currentColor">
+                            <g>
+                                <path d="M481.883,61.238l-474.3,171.4c-8.8,3.2-10.3,15-2.6,20.2l70.9,48.4l321.8-169.7l-272.4,203.4v82.4c0,5.6,6.3,9,11,5.9   l60-39.8l59.1,40.3c5.4,3.7,12.8,2.1,16.3-3.5l214.5-353.7C487.983,63.638,485.083,60.038,481.883,61.238z"/>
+                            </g>
+                        </svg>&nbsp;
+                        Contact
+                    </a>
+                    <a id="githubBtnMain" href="https://github.com/" class="flex flex-row items-center justify-center bg-secondary-bg-color px-5 py-2 shadow-lg text-text-primary text-lg font-semibold rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M16 0.396c-8.839 0-16 7.167-16 16 0 7.073 4.584 13.068 10.937 15.183 0.803 0.151 1.093-0.344 1.093-0.772 0-0.38-0.009-1.385-0.015-2.719-4.453 0.964-5.391-2.151-5.391-2.151-0.729-1.844-1.781-2.339-1.781-2.339-1.448-0.989 0.115-0.968 0.115-0.968 1.604 0.109 2.448 1.645 2.448 1.645 1.427 2.448 3.744 1.74 4.661 1.328 0.14-1.031 0.557-1.74 1.011-2.135-3.552-0.401-7.287-1.776-7.287-7.907 0-1.751 0.62-3.177 1.645-4.297-0.177-0.401-0.719-2.031 0.141-4.235 0 0 1.339-0.427 4.4 1.641 1.281-0.355 2.641-0.532 4-0.541 1.36 0.009 2.719 0.187 4 0.541 3.043-2.068 4.381-1.641 4.381-1.641 0.859 2.204 0.317 3.833 0.161 4.235 1.015 1.12 1.635 2.547 1.635 4.297 0 6.145-3.74 7.5-7.296 7.891 0.556 0.479 1.077 1.464 1.077 2.959 0 2.14-0.020 3.864-0.020 4.385 0 0.416 0.28 0.916 1.104 0.755 6.4-2.093 10.979-8.093 10.979-15.156 0-8.833-7.161-16-16-16z"/>
+                        </svg>&nbsp;
+                        github.com/
+                    </a>
+                </div>
+
+                <div class="break"></div>
+                <div class="break"></div>
+                <div class="break"></div>
+            </div>
+        </div>
+
+        <div id="experience" class="slide hidden relative text-center w-full" data-prev="true" data-next="true">
+            <div class="flex flex-col items-center space-y-16 m-10">
+                <h1 class="text-5xl text-text-primary font-semibold">Experience & Education</h1>
+                
+                <ol id="timeline" class="relative m-10 md:max-w-2xl border-l-2 border-secondary-bg-color">                  
+                    
+                </ol>
+            </div>
+        </div>
+
+        <div id="projects" class="slide hidden relative text-center w-full" data-prev="true" data-next="true">
+            <h1 class="text-5xl text-text-primary font-semibold m-10">Projects (GitHub)</h1>
+
+            <div id="repos" class="m-2 md:m-8 text-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-8">
+                
+            </div>
+        </div>
+
+        <div id="contact" class="slide hidden text-center relative w-full" data-prev="true">
+            <div class="flex flex-col items-center space-y-16 m-6"></div>
+                <h1 class="text-5xl text-text-primary font-semibold">Get in Touch!</h1>
+
+                <div id="methods" class="flex flex-col space-y-8 bg-secondary-bg-color m-10 py-10 rounded-xl shadow-2xl text-blue-accent-emphasis text-lg font-semibold">
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
