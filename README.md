@@ -6,6 +6,13 @@
 ### Why Minus?
 Minus is different than other portfolio templates in that it requires zero-to-little code in order to rendeer. As opposed to these other templates, you do not need to go hunting through HTML files looking for data/sections to modify, but can now manage everything from one, simple, config file. Oh, and I forgot to mention: It's all open-source AND client-side!
 
+Some cool features of Minus:
+- load fast
+- cool color scheme
+- GitHub API integration: display all your Open-Source repos with Minus.
+- Easy templating
+- Mobile support
+
 <br>
 
 ### Editing Data
@@ -26,6 +33,14 @@ While I'm talking about the files, it's probably important to mention where (and
     - ``config.js: JSON for easy-data addition to template``<br>
     - ``parser.js: Uses config.js data and appends to template``
     
+<br>
+
+### Screenshots
+![Homepage](https://i.imgur.com/MAumF3L.png)
+![Experience](https://i.imgur.com/NOWSCAG.png)
+![Repos](https://i.imgur.com/Na947EZ.png)
+![Contact](https://i.imgur.com/8TxCRFr.png)
+
 <br>
 
 ### Adding new pages
