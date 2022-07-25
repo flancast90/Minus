@@ -168,7 +168,7 @@ try {
     document.querySelector('#contactBtnMain').href += settings.email;
 
     document.querySelector('#githubBtnMain').href += settings.github;
-    document.querySelector('#githubBtnMain').innerText += settings.github;
+    document.querySelector('#githubBtnMain').innerHTML += settings.github;
 
     new newContact(settings.contact.linkedin, settings.contact.github, settings.contact.discord, settings.contact.gmail)
 } catch (error) {

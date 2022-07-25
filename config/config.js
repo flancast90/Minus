@@ -1,9 +1,9 @@
 var settings = {
     // common elements such as name, handles, etc
     name: "Finn Lancaster",
-    profile: "assets/images/me.png",
+    profile: "assets/images/me.jpg",
     description: "Student, developer, ethical hacker, and pianist with a passion for the latest tech, AI, and the open-source community.",
-    email: "flancast90@gmail.com",
+    email: "finn.lancaster@finnsoftware.net",
     github: "flancast90",
 
     navLinks: [
@@ -77,8 +77,8 @@ var settings = {
             link: "https://discord.com/users/821777475587276802"
         },
         gmail: {
-            handle: "flancast90@gmail.com",
-            link: "mailto:flancast90@gmail.com"
+            handle: "finn.lancaster@finnsoftware.net",
+            link: "mailto:finn.lancaster@finnsoftware.net"
         }
     }
 }
